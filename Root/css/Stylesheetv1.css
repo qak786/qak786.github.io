@@ -1,0 +1,257 @@
+body,header,nav,main,section,footer,h1,h2,h3,h4,h5,h6,p,ol,ul,li,div,article,aside{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}/*I have used this to reset the default values of the browser. This is known as CSS reset*/
+
+body{/*Used to target the body tag*/
+	font-family: arial;/*It sets the font of the content that is within the body tag to arial.*/
+	font-size: 16px;/*This sets the font size, as used it targets the body tag, it will change the font size of the whole page*/
+	background-color: rgb(213,251,255);/*Sets the background color usint the red blue and green values of the color palette*/
+}
+header{/*Used to target the header tag*/
+	background-color: rgb(15,22,38);/*Sets the background color usint the red blue and green values of the color palette*/
+	color: white;/*It sets the colour of the font to white*/
+	padding: 30px;/*Padding sets space in the inner side of the element, in this case the header. */
+}
+header h1{/*Used to target the h1 element in the header tag*/
+	text-align: center;/*It centers the text into the middle of the element, equal distance from left and right*/
+	font: 1.5em;/*It increases the font size, the default being 12px, 1em=12px and 1.5em=18px*/
+}
+nav{/*Targets the nav tag*/
+	background-color: rgb(79,100,125);/*Sets the background color usint the red blue and green values of the color palette*/
+	border-bottom: 1px solid black;/*This creates a border at the bottom of the nav of 1px line of black colour*/
+}
+nav ul{/*Used to ttarget the ul tag*/
+	text-align: center;/*It centers the text into the middle of the element*/
+	padding: 10px 20px 10px 20px;/*It increases the space on the inner side of the elements border. The values are top,right,bottom,left.*/
+}
+nav li{/*targets the list item within the nav tag*/
+	display: inline;/*List is a block level element, by changing the display to inline, it changes to the inline level element */
+}
+a{/*targets all the anchor tags within the page*/
+	text-decoration: none;/*The anchor tag has by default underlining and some other properties. To remove them, text decoration is set to none*/
+}
+li a:hover:not(.active) {/*It targets the a tag within the li item, the hover means, when the mouse pointer is on the item, not means except when the items that belong to the active id*/
+	background-color: rgb(222,246,255);/*Sets the background color usint the red blue and green values of the color palette*/
+	color: black;/*sets the text color to black*/
+	transition-property: background-color;/*Transition property is used to make the changes of the items more smooth, in this case the background colour*/
+	transition-duration: 1s;/*The duration in which this effect will happen will be 1second*/
+}
+.active{/*Targets the element with the class active*/
+	background-color: lightblue;/*sets the background colour of the element*/
+	color: black;/*sets the colour of the text*/
+	cursor:default;/*When the mouse pointer is on this element, the mouse cursor will be on its default state*/
+}
+a:focus{/*Targets the achor tags, the focus is a pseudo class in which the user can set what happens when an element is selected or focused*/
+	outline: 2px solid red;/*It draws a line on the edges of the element*/
+}
+ nav li:first-child a{
+	display:none;
+}
+section h2{/*Targets the h2 of the section*/
+	text-align: center;/*Centers the text*/
+	padding: 20px;
+	font-size: 2em;
+}
+article ul{
+	margin-left: 80px;
+}
+article p{
+	padding: 10px;
+}
+article h3{
+	border-bottom: 3px solid black;
+}
+article h4{
+	margin-left: 10px;
+}
+#programming img{
+	float: right;/*Removes the element from the normal flow of the webpage*/
+}
+#webDevelopment img{
+	float:left;
+	margin: 0 0 10px 10%;/*sets the spaceon the outer side of the border*/
+}
+#details{
+	width: 80%;/*sets the width of the element to 80% of the space available from its parent element*/
+	margin: 0 auto;/*By setting the margin 0 auto, it checks the available space on its right side and divides this space equally to the right and the left*/
+	margin-bottom: 20px;/*It sets the margin on outer side of the border at the bottom*/
+	}
+#details p{
+	float: left;
+	padding-top: 50px;
+	margin-right: 10px;
+}
+footer{
+	background-color: rgb(15,22,38);/*Sets the background color usint the red blue and green values of the color palette*/
+	color: white;
+	padding: 10px;
+	clear: both;/*When an element is floated, it removes from the normal document flow, so the element on the bottom cannot see that element, in that case, this element moves up. By clearing the element, the element moves down and it makes it look like the element is still there*/
+	text-align: center;
+	border-top: 3px solid black;/*It creates a border on the border of the element, in this case a black colour line*/
+}
+/*Desktop Devices*/
+@media only screen and (min-width:931px) {/*Media queries are used to create responsiveness of the page for different viewport sizes*/
+	.container{
+		background-color: white;
+		width: 90%;
+		margin: 0 auto;
+	}
+	section{
+		float: left;
+	}
+	nav a{
+		text-decoration: none;/*The anchor tags set the underlining of the text which are links by default. This removes the underlining of the links*/
+		color: white;
+		padding: 10px 20px 10px 20px;
+		border-right: 1px solid black;
+		font-size: 1.5em
+	}
+	#articleSection{
+		width: 65%;
+		padding-right: 10px;
+		border-right: 1px solid black;
+	}
+	#asideSection{
+		width: 25%;
+		padding: 10px 20px 10px 20px;
+	}
+	article table{
+		margin: 10px;
+	}
+	#programming img:hover, #webDevelopment img:hover{/*targets the images within the element and when the mouse cursor is on top of the element*/
+		transform: scale(2,2);/*This tells the browser to increase the size of the picture by scale of x=2 and y=2 which makes the image bigger*/
+		transition-property: transform;/*Transition property is used to make the change smoother using a specified time.*/
+		transition-duration: 3s;/*This tells how long it will take for the change of the element, in this case the transformation*/
+	}
+}
+/*Tablet Devices*/
+@media(min-width:523px) and (max-width:930px) {
+	.container{
+	background-color: white;
+	width: 80%;
+	font-size: 12px;
+	margin: 0 auto;
+	}
+	#articleSection{
+	width: 100%;
+	padding-right: 10px;
+	}
+	nav a{
+		color: white;
+		padding: 10px 5px 10px 5px;
+		border-right: 1px solid black;
+		font-size: 1em;
+	}
+	nav ul{
+		text-align: center;
+		padding: 10px 20px 10px 20px;
+	}
+	#asideSection{
+		margin-top: 10px;
+		padding: 10px 20px 10px 20px;
+		border-top: 3px dotted black;
+		column-count: 2;
+		column-gap: 16px;
+	}
+	#details{
+		width:60%;
+		margin: 0 auto
+	}
+	#details img{
+	width: 100px;
+	height: 100px;
+	}
+	#details p{
+	float: left;
+	padding-left: 30px;
+	padding-top: 25px;
+	margin-right: 10px;
+	}
+	#programming img{
+		float: right;
+		width: 125px;
+		height: 118px;
+		margin-right: 10px;
+	}
+	#csf img{
+		width: 300px;
+		height: 269px;
+	}
+	#programming img:hover, #webDevelopment img:hover{
+	transform: scale(3,3);
+	transition-property: transform;
+	transition-duration: 3s;
+	}
+}
+/*Mobile Devices*/
+@media(max-width: 522px){
+	.container{
+	background-color: white;
+	width: 100%;
+	font-size: 16px;
+	padding: 10px;
+	}
+	#articleSection{
+	width: 100%;
+	padding-right: 10px;
+	}
+	nav{
+		background-color: rgb(79,100,125);
+		border-bottom: 1px solid black;
+	}
+	nav a{
+		display: block;
+		text-decoration: none;/*The anchor tags set the underlining of the text which are links by default. This removes the underlining of the links*/
+		color: white;
+		padding: 10px 0;
+		font-size: 1.5em;
+	}
+	nav ul{
+		width: 100%;
+		padding: 0;
+	}
+	nav li{
+		width: 100%;
+		border-top: 1px solid black;
+		display: block;/*It displays the navigation menu list horizontally, from left to right*/
+	}
+	#details{
+		width:60%;
+		margin: 0 auto
+	}
+	#details img{
+	width: 100px;
+	height: 100px;
+	}
+	#details p{
+	float: left;
+	padding-left: 30px;
+	padding-top: 25px;
+	margin-right: 10px;
+	}
+	#asideSection{
+		margin: 10px 0 10px 10pz;
+		padding: 10px 20px 10px 20px;
+		border-top: 3px dotted black;
+		column-count: 2;
+		column-gap: 16px;
+	}
+	#programming img{
+		float: right;
+		width: 100px;
+		height: 94px;
+		margin-right: 10px;
+	}
+	#webDevelopment img{
+		display: block;
+		margin: 0 auto 10px auto;
+		width: 125px;
+		height: 120px;
+	}
+	#csf img{
+		width: 200px;
+		height: 179px;
+	}
+}

@@ -1,0 +1,82 @@
+body,header,nav,main,section,footer,h1,h2,h3,h4,h5,h6,p,ol,ul,li,table,caption,tr,div,th,td,article,aside,canvas{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body{
+	font-family: arial;/*It sets the font of the content that is within the body tag to arial.*/
+}
+
+header{
+	margin: 0;
+	padding: 0;
+}
+header img{
+	width: 100%;/*It makes the size of the image change as the size of the browser changes*/
+}
+#container{
+	padding: 0px,50px, 0px,50px;
+	margin: 0 auto;
+	width: 80%;
+	height: auto;
+	border: 3px solid #880000;/*Use of border*/
+}
+nav{
+	padding: 20px;
+	border: 1px solid yellow;
+	background-color: yellow;
+}
+nav ul{
+	margin: 0 auto;
+	height: auto;
+	width: 28%;
+}
+nav ul a{
+	text-decoration: none;/*To remove the line under the links that are by default due to the anchor tag*/	
+}
+nav ul li{
+	display: inline;
+	padding: 5%;
+}
+
+section{
+	
+	padding: 100px;
+	margin-left: 20px;
+	margin-right: 20px;
+	height: auto;
+	border-right: 3px solid #880000;
+	border-left: 3px solid #880000;/*Use of border*/
+}
+aside{
+	float: right;
+	padding: 50px;
+	margin: 20px;
+	border: 3px solid #880000;
+}
+footer{
+	clear 
+}
+/*
+
+.test{
+	margin-left: 500px;
+	margin-right: 500px;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+nav ul{
+	margin-left: 250px;/*I have added these in order to create the menu at the centre of the page*/
+	/*margin-right: 250px;/*I have added these in order to create the menu at the centre of the page*/
+	/*list-style-type: none;/*To remove the bullet points from the navigation menu*/
+}
+/*
+nav ul li{
+	width: 100%;
+	background-color: red;
+	border: 1px solid red;/*Creating a border for the list of the menu bar*/
+	/*padding: 10px;
+	display: inline;
+}*/

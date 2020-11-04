@@ -59,7 +59,9 @@ nav {
 	background-image: linear-gradient(rgb(59, 120, 204), rgb(30, 60, 102));
 }  
 @media (min-width: 600px) {
-	
+	body {
+		background-color: white;
+	}
 }
 
 

@@ -58,6 +58,34 @@ nav {
   background-image: linear-gradient(rgb(59,120,204), rgb(30,60,102));
 }
 
+.clip-circle {
+  clip-path: circle(125px at center);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+  color: white;
+  margin-top: 30px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  color: white;
+}
+
 @media (min-width:640px) {
-  
+  .clip-circle {
+    width: 500px;
+    height: 500px;
+    clip-path: circle(250px at center);
+  }
+  h1{
+    font-size: 64px;
+  }
 }

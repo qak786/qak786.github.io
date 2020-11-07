@@ -81,11 +81,11 @@ h2 {
 
 @media (min-width:640px) {
   .clip-circle {
-    width: 500px;
-    height: 500px;
-    clip-path: circle(250px at center);
+    width: 350px;
+    height: 350px;
+    clip-path: circle(175px at center);
   }
   h1{
-    font-size: 64px;
+    font-size: 50px;
   }
 }
